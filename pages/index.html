@@ -5,15 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Custom Discs</title>
+    <link rel="icon" href="{{ url_for('static', filename='images/favicon.ico') }}" type="image/x-icon">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/playlist_style.css') }}">
-    <meta name="theme-color" content="#800080">
-    <meta name="title" content="Custom Disc Creator"><!--The link title in the embed-->
-    <meta name="description" content="Create your own custom music discs for Minecraft."><!--The description in the embed-->
-    <meta name="keywords" content="Minecraft, Custom Discs, Music Discs, Custom Music Discs, Minecraft Music Discs"><!--Keywords for the search engine-->
-    <meta name="robots" content="index, follow"><!-- Ignorable -->
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <meta name="language" content="English">
+    {% include 'templates/meta.html' %}
 </head>
 
 <body>

@@ -1,7 +1,7 @@
 import os
 
 # Configurações do servidor
-IP = "127.0.0.8"
+IP = "0.0.0.0"
 PORT = 80
 CACHE = 86400
 SECRET_KEY = os.urandom(24)

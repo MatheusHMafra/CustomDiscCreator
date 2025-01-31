@@ -1,6 +1,9 @@
-<!---->
+<!-- markdownlint-disable MD029 -->
 
 # Custom Disc Creator
+
+If you want to just use the website, you can access it [here](https://customdisccreator.squareweb.app/).  
+Se você deseja apenas usar o site, você pode acessá-lo [aqui](https://customdisccreator.squareweb.app/).
 
 [🇺🇸 English Version](#custom-disc-creator---en)  
 [🇧🇷 Versão em Português](#custom-disc-creator---pt-br)
@@ -25,6 +28,36 @@ A website to create custom music discs for Minecraft using the game's custom res
 - Flask
 - FFmpeg (for audio conversion)
 
+## 🏠 Self-Hosting
+
+1. Clone the repository:
+
+```bash
+git clone https://github.com/MatheusHMafra/CustomDiscCreator.git
+```
+
+2. Install dependencies:
+
+```bash
+pip install -r requirements.txt
+```
+
+3. Install FFmpeg:
+   - Windows: Download from [FFmpeg website](https://ffmpeg.org/download.html)
+   - Linux: `sudo apt install ffmpeg`
+   - macOS: `brew install ffmpeg`
+
+4. Configure the server:
+   - Open config.py and edit the settings
+
+5. Run the application:
+
+```bash
+python app.py
+```
+
+The server will start at `http://localhost:80`
+
 ## 📦 Supported Formats
 
 - Audio: .ogg
@@ -41,10 +74,10 @@ A website to create custom music discs for Minecraft using the game's custom res
    - Enter the author's name
    - Upload the audio file (.ogg)
 4. Configure the package information:
-   - Package icon
-   - Package title
-   - Description
-   - Format version
+   - Package icon (optional)
+   - Package title (optional)
+   - Description (optional)
+   - Format version (optional)
 5. Select the Minecraft version (1.21 or 1.21.4+)
 6. Click "Download" to generate the datapack
 
@@ -68,7 +101,10 @@ Contributions are welcome! Please feel free to submit pull requests or create is
 
 ## 📝 License
 
-This project is under the MIT license. See the LICENSE file for more details.
+This project is under the AGPL-3.0 license. See the LICENSE file for more details.
+
+---
+---
 
 # Custom Disc Creator - PT-BR
 
@@ -90,6 +126,36 @@ Um site para criar discos de música personalizados para Minecraft usando o sist
 - Flask
 - FFmpeg (para conversão de áudio)
 
+## 🏠 Auto-Hospedagem
+
+1. Clone o repositório:
+
+```bash
+git clone https://github.com/MatheusHMafra/CustomDiscCreator.git
+```
+
+2. Instale as dependências:
+
+```bash
+pip install -r requirements.txt
+```
+
+3. Instale o FFmpeg:
+   - Windows: Baixe do [site do FFmpeg](https://ffmpeg.org/download.html)
+   - Linux: `sudo apt install ffmpeg`
+   - macOS: `brew install ffmpeg`
+
+4. Configure o servidor:
+   - Abra o arquivo config.py e edite as configurações
+
+5. Execute a aplicação:
+
+```bash
+python app.py
+```
+
+O servidor iniciará em `http://localhost:80`
+
 ## 📦 Formatos Suportados
 
 - Áudio: .ogg
@@ -106,10 +172,10 @@ Um site para criar discos de música personalizados para Minecraft usando o sist
    - Digite o nome do autor
    - Faça upload do arquivo de áudio (.ogg)
 4. Configure as informações do pacote:
-   - Ícone do pacote
-   - Título do pacote
-   - Descrição
-   - Versão do formato
+   - Ícone do pacote (opcional)
+   - Título do pacote (opcional)
+   - Descrição (opcional)
+   - Versão do formato (opcional)
 5. Selecione a versão do Minecraft (1.21 ou 1.21.4+)
 6. Clique em "Download" para gerar o datapack
 
@@ -133,4 +199,4 @@ Contribuições são bem-vindas! Por favor, sinta-se à vontade para enviar pull
 
 ## 📝 Licença
 
-Este projeto está sob a licença MIT. Veja o arquivo LICENSE para mais detalhes.
+Este projeto está sob a licença AGPL-3.0. Veja o arquivo LICENSE para mais detalhes.

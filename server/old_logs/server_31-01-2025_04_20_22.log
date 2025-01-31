@@ -1,0 +1,14 @@
+
+--- Arquivo de Log para o Servidor ---
+--- Configurações do servidor ---
+IP: 0.0.0.0
+PORT: 80
+CACHE: 86400
+
+--- Inicializando.... ---
+
+--- Mensagens de log ---
+2025-01-31 04:19:56,478 [INFO] Servidor iniciado às 31/01/2025 04:19:56
+2025-01-31 04:19:56,482 [INFO] Serving on http://0.0.0.0:80
+2025-01-31 04:20:02,738 [INFO] Página solicitada: ( '/' ) 
+2025-01-31 04:20:22,394 [INFO] Servidor interrompido às 31/01/2025 04:20:22
