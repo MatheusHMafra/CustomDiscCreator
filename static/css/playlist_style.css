@@ -1,0 +1,145 @@
+.song {
+    font-family: 'Satoshi-Light';
+    margin-top: 2vh;
+    width: 100%; /* Corrige a largura que estava causando overflow */
+    height: auto;
+    list-style-type: none;
+    display: flex;
+    justify-content:space-around;
+    border: solid;
+    border-color: #333;
+    vertical-align: text-top;
+    position: relative;
+    background-color: #1e1e1e;
+    border-radius: 8px;
+    border: 1px solid #333;
+    padding: 1rem;
+    margin: 1rem auto;
+    max-width: 1200px;
+    transition: all 0.3s ease;
+}
+
+.song:hover {
+    transform: translateX(4px);
+    border-color: #444;
+}
+
+.song-item {
+    margin-left: 2vw;
+}
+.song-image-li {
+    flex: 1;
+}
+.song-title-li {
+    flex: 2;
+}
+.song-title {
+    margin-top: 7.5%;
+}
+.song-author-li {
+    flex: 2;
+}
+.song-author {
+    margin-top: 7.5%;
+}
+.song-length-li {
+    flex: 0.5;
+}
+.song-length {
+    margin-top: 30%;
+}
+.song-file-li {
+    flex: 2;
+}
+.song-file {
+    margin-top: 7.5%;
+}
+
+.song-remove {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-left: 1vh;
+    opacity: 0.7;
+    transition: all 0.3s ease;
+}
+
+.song-remove:hover {
+    opacity: 1;
+    color: #e74c3c;
+    transform: scale(1.1);
+}
+
+.song-remove,
+.cross-sign {
+    cursor: pointer;
+}
+
+.song-image-container {
+    flex: 1;
+    width: 50%;
+    background-color: rgb(3, 2, 3);
+    padding-top:50%;
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.song-image-container:hover {
+    transform: scale(1.05);
+}
+
+.song-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    cursor: pointer;
+    background-size: cover;
+    image-rendering: pixelated;
+}
+
+.text-input {
+    background-color: #2c2c2c;
+    border-radius: 0.5vw;
+    color: white;
+    border: 1px solid #444;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.text-input:focus {
+    background-color: #333;
+    border-color: #2ecc71;
+    outline: none;
+}
+
+.song-file-label {
+    color: gray;
+    cursor: pointer;
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background-color: #2c2c2c;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.song-file-label:hover {
+    color: gray;
+    cursor: pointer;
+}
+
+.add-song-button {
+    color: #2ecc71;
+    transition: all 0.3s ease;
+}
+
+.add-song-button:hover {
+    color: #27ae60;
+    transform: scale(1.1);
+}

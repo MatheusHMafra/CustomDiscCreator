@@ -1,0 +1,14 @@
+
+--- Arquivo de Log para o Servidor ---
+--- Configurações do servidor ---
+IP: 127.0.0.8
+PORT: 80
+CACHE: 86400
+
+--- Inicializando.... ---
+
+--- Mensagens de log ---
+2025-01-31 03:51:33,653 [INFO] Servidor iniciado às 31/01/2025 03:51:33
+2025-01-31 03:51:33,658 [INFO] Serving on http://127.0.0.8:80
+2025-01-31 03:51:35,449 [INFO] Página solicitada: ( '/' ) 
+2025-01-31 03:52:40,378 [INFO] Página solicitada: ( '/' ) 

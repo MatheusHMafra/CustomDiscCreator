@@ -1,0 +1,5 @@
+flask
+waitress
+pydub
+audioop-lts
+Flask-Limiter

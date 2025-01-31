@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Discs</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/playlist_style.css') }}">
+    <meta name="theme-color" content="#800080">
+    <meta name="title" content="Custom Disc Creator"><!--The link title in the embed-->
+    <meta name="description" content="Create your own custom music discs for Minecraft."><!--The description in the embed-->
+    <meta name="keywords" content="Minecraft, Custom Discs, Music Discs, Custom Music Discs, Minecraft Music Discs"><!--Keywords for the search engine-->
+    <meta name="robots" content="index, follow"><!-- Ignorable -->
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="language" content="English">
+</head>
+
+<body>
+    <div id="loader" class="loader"></div>
+    <div class="playlist-container">
+        <header class="info-section">
+            <!-- Image Section -->
+            <div class="playlist-image-container">
+                <label for="pack-icon-input" class="song-image-label">
+                    <div class="playlist-image" id="imagePreview"></div>
+                </label>
+                <input type="file" id="pack-icon-input" name="pack-icon-input" class="pack-icon-input"
+                    accept="image/png" style="display: none;" onchange="showImage(event, 'imagePreview', true)" />
+            </div>
+
+            <!-- Text Section -->
+            <div class="text-container">
+                <div class="playlist-info-text playlist-version">
+                    <label for="packVersion">Pack Format :</label>
+
+                    <input type="number" id="packVersion" name="packVersion" min="34" value="34"
+                        class="pack-version-input" />
+                </div>
+
+                <div>
+                    <input type="text" id="packTitle" name="packTitle" value="Title"
+                        class="playlist-info-text pack-title-input" />
+                </div>
+                <form>
+                    <textarea id="packDescription" name="packDescription" rows="2" cols="65"
+                        class="playlist-info-text  pack-description-input">Pack Description</textarea>
+                </form>
+            </div>
+            <div>
+                <!-- Toggle button with dynamic text inside -->
+                <label class="toggle-button">
+                    <input type="checkbox" id="toggle" checked>
+                    <div class="toggle-circle"></div>
+                    <div class="toggle-label" id="toggle-label">1.21.4+</div>
+                </label>
+            </div>
+        </header>
+        <div class="playlist-element-list">
+            <ul class="song-info-div">
+                <li class="top-label-add song-info-item">
+                    <div id="addSong" class="add-song-button ">
+                        <span class="plus-sign" onclick="addMusicDisc()">+</span>
+                    </div>
+                    <p class="adding-text" onclick="addMusicDisc()">Add</p>
+                </li>
+                <li class="top-label-title song-info-item">Title</li>
+                <li class="top-label-author song-info-item">Author</li>
+                <li class="top-label-song-file song-info-item">File</li>
+                <li class="top-label-song-length song-info-item">Time</li>
+            </ul>
+            <div id="playlist-div">
+
+            </div>
+        </div>
+    </div>
+    <div class="download-button-container">
+        <div class="loading-bar-container">
+            <div class="loading-bar"></div>
+        </div>
+        <button class="download-button" onclick="download()">
+            Download
+        </button>
+    </div>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/jszip.min.js') }}"></script>
+</body>
+
+</html>

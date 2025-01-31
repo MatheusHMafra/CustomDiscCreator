@@ -1,0 +1,310 @@
+@import url('satoshi.css');
+
+* {
+    font-family: Satoshi-Regular;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #121212;
+    color: #f3f3f3;
+    overflow-x: hidden;
+    min-height: 100vh;
+    position: relative;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+.playlist-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    position: relative;
+    padding-bottom: 80px; /* Espaço para o botão de download */
+}
+
+.playlist-image-container {
+    margin: 2vh auto;
+    max-width: 400px;
+    width: 100%;
+    height: 400px; /* Altura fixa */
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.playlist-image {
+    height: 100%;
+    width: 100%;
+    cursor: pointer;
+    background-size: cover;
+    background-position: center;
+    image-rendering: pixelated;
+    padding: 0; /* Remove o padding que estava causando o corte */
+    transition: transform 0.3s ease;
+}
+
+.playlist-image:hover {
+    transform: scale(1.02);
+}
+
+.info-section {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.toggle-button {
+    margin-top: 2vh;
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: inline-block;
+    width: 100px;
+    height: 40px;
+    border-radius: 40px;
+    background-color: #2c2c2c;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.toggle-button:hover {
+    background-color: #3c3c3c;
+}
+
+.toggle-button input {
+    display: none;
+}
+
+.toggle-circle {
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background-color: white;
+    transition: transform 0.4s;
+}
+
+.toggle-button input:checked+.toggle-circle {
+    transform: translateX(60px);
+}
+
+.toggle-label {
+    position: absolute;
+    top: 50%;
+    left: 50px;
+    transform: translateY(-50%);
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    pointer-events: none;
+    transition: left 0.4s;
+}
+
+.toggle-button input:checked~.toggle-label {
+    left: 10px;
+}
+
+.text-container {
+    margin-left: 2vw;
+}
+
+.playlist-info-text {
+    margin: 1vw;
+}
+
+.pack-title-input {
+    font-family: 'Satoshi-Black';
+    font-size: clamp(2rem, 5vw, 4rem);
+    color: white;
+    background-color: black;
+    border: none;
+    transition: border-color 0.3s ease;
+}
+
+.pack-title-input:focus {
+    outline: none;
+    border-bottom: solid;
+    box-shadow: none;
+}
+
+.pack-title-input:hover {
+    border-color: #555;
+}
+
+.pack-description-input {
+    font-family: 'Satoshi-Medium';
+    font-size: 5vh;
+    color: white;
+    background-color: black;
+    border: none;
+    width: 100%;
+}
+
+.pack-description-input:focus {
+    outline: none;
+    border-bottom: solid;
+    box-shadow: none;
+}
+
+.pack-version-input {
+    background: none;
+    border: none;
+    color: white;
+    width: 10ch;
+}
+
+.pack-version-input:focus {
+    outline: none;
+    border-bottom: solid;
+    box-shadow: none;
+}
+
+.song-info-div {
+    font-family: 'Satoshi-Light';
+    margin-top: 2vh;
+    width: 100%; /* Corrige a largura que estava causando overflow */
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+    border-bottom: solid;
+    border-color: #333;
+    vertical-align: text-top;
+}
+
+.song-info-item {
+    margin-left: 2vw;
+}
+
+.top-label-title {
+    flex: 2;
+}
+
+.top-label-author {
+    flex: 2;
+}
+
+.top-label-song-length {
+    flex: 0.5;
+}
+
+.top-label-song-file {
+    flex: 2;
+}
+
+.top-label-add {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+
+}
+
+.top-label-add:hover {
+    color: gray;
+    /* Make text gray */
+}
+
+.add-song-button {
+    font-size: 2rem;
+    line-height: 3vh;
+}
+
+.add-song-button, 
+.adding-text {
+    cursor: pointer;
+}
+
+.adding-text {
+    font-size: 1rem;
+    margin: 0;
+}
+
+.download-button-container {
+    position: fixed;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 100;
+    width: auto;
+    text-align: center;
+}
+
+.download-button {
+    min-width: 200px;
+    width: auto;
+    padding: 1rem 2rem;
+    color: #f3f3f3;
+    border: none;
+    border-radius: 8px;
+    background-color: #2ecc71;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    margin: 0 auto;
+}
+
+.download-button:hover {
+    background-color: #27ae60;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(46,204,113,0.2);
+}
+
+.loader {
+    border: 16px solid #f3f3f3;
+    border-top: 16px solid #75E192;
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    animation: spin 2s linear infinite;
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+    margin-left: -60px;
+    margin-top: -60px;
+    backdrop-filter: blur(5px);
+    background-color: rgba(0,0,0,0.5);
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.step {
+    margin: 10vh;
+    list-style-type: none;
+    border: #555;
+    border-top: solid;
+}
+
+.step img {
+    max-width: 80vw;
+    max-height: 80vh;
+    width: auto;
+    height: auto;
+}
+
+.help-link {
+
+    color: rgb(185, 192, 255);
+
+}
+
+.help-link:visited {
+
+    color: rgb(142, 125, 201);
+
+}
