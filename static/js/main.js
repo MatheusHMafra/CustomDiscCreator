@@ -435,7 +435,7 @@ async function fetchPackInfo(zip) {
     const jsonData = {
         pack: {
             pack_format: packVersion,
-            supported_formats: [34, 45],
+            supported_formats: [41, 57],
             description: packDescription.replace(/\\n/g, '\n')
         },
         overlays: {

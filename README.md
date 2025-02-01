@@ -62,7 +62,7 @@ The server will start at `http://localhost:80`
 
 - Audio: .ogg
 - Images: .png
-- Pack Format: 34-45
+- Pack Format: 48-61
 
 ## 🚀 How to Use
 
@@ -160,7 +160,7 @@ O servidor iniciará em `http://localhost:80`
 
 - Áudio: .ogg
 - Imagens: .png
-- Pack Format: 34-45
+- Pack Format: 48-61
 
 ## 🚀 Como Usar
 
